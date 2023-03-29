@@ -34,6 +34,12 @@ h1 {
 
 }
 
+p#output {
+    line-height: 1.3em;
+    font-size: small;
+}
+
+
 #fields {
     display: flex;
     justify-content: space-evenly;

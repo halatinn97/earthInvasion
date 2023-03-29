@@ -110,7 +110,7 @@ function playGame() {
             endGame();
         }
     } else {
-        output.innerHTML = "Miss!" + gameState;
+        output.innerHTML = "Miss!" + "<br>" + gameState;
 
         //Check for end of game
         if (shotsRemaining < 1) {
