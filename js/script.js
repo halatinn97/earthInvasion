@@ -138,7 +138,7 @@ function playGame() {
 //End of game output 
 function endGame() {
     if (gameWon) {
-        output.innerHTML = "WIN! You saved the earth!" + "<br>" + "It only took you " + shotsFired + " shots.";
+        output.innerHTML = "WIN! You saved the earth!" + "<br>" + "It only took you " + shotsFired + " shot(s).";
     } else {
         output.innerHTML = "GAME OVER! The earth has been destroyed";
     }
