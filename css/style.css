@@ -3,3 +3,70 @@
     padding: 0;
     margin: 0;
 }
+
+
+#stage {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#earth {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../images/earth.jpg);
+    background-position: center;
+}
+
+#cannon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 270px;
+    left: 140px;
+    background-image: url(../images/cannon.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#commet {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    background-image: url(../images/commet.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#missile {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 240px;
+    left: 145px;
+    background-image: url(../images/missile.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#explosion {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../images/explosion.jpg);
+    display: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
