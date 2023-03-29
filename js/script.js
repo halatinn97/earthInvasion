@@ -40,7 +40,7 @@ function keydownHandler(event) {
 function render() {
     //Position commet 
     commet.style.left = commetX + "px"; //80px left of stage 
-    commet.style.top = commetY + "px"; //20px left of stage
+    commet.style.top = commetY + "px"; //20px below top of stage
 
     //Position cannon
     cannon.style.left = guessX + "px";
@@ -125,7 +125,7 @@ function playGame() {
         commetX = Math.floor(Math.random() * 280);
 
         //Add 30 to new Y position so that commet moves towards earth
-        commetY += 30;
+        commetY += 18;
     }
 
     //Render new game state
