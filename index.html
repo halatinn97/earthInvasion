@@ -7,24 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earth Invasion</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div id="page-wrapper">
-        <div id="page-text-wrapper">
-            <p id="output">Enter the X & Y position (0-300), then click fire.</p>
-            <input id="inputX" type="text" placeholder="X...">
-            <input id="inputY" type="text" placeholder="Y...">
-        </div>
-        <button id="fire">Fire!</button>
-
+        <h1>EARTH INVASION</h1>
         <div id="stage">
             <div id="earth"></div>
             <div id="cannon"></div>
             <div id="missile"></div>
             <div id="commet"></div>
             <div id="explosion"></div>
+        </div>
+
+        <div id="page-text-wrapper">
+            <p id="output">Enter the X & Y position (0-300), then click fire.</p>
+            <div id="fields">
+                <input id="inputX" type="text" placeholder="X...">
+                <input id="inputY" type="text" placeholder="Y...">
+                <button id="fire">Fire!</button>
+            </div>
         </div>
     </div>
 

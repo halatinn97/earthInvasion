@@ -2,8 +2,46 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
 
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #14215e;
+}
+
+
+#page-text-wrapper {
+    background-color: #d5e805;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 80%;
+    text-align-last: center;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+
+h1 {
+    margin-bottom: 1em;
+    color: #d5e805;
+}
+
+#fields {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
+input,
+button {
+    width: 5em;
+}
 
 #stage {
     width: 300px;
@@ -19,6 +57,7 @@
     left: 0px;
     background-image: url(../images/earth.jpg);
     background-position: center;
+    border-radius: 1em;
 }
 
 #cannon {

@@ -36,12 +36,11 @@ function keydownHandler(event) {
     }
 }
 
-//Game functionality
-
+//Move game objects based on game information
 function render() {
     //Position commet 
-    commet.style.left = commetX + "px"; //horizontal 
-    commet.style.top = commetY + "px"; //vertical
+    commet.style.left = commetX + "px"; //80px left of stage 
+    commet.style.top = commetY + "px"; //20px left of stage
 
     //Position cannon
     cannon.style.left = guessX + "px";
@@ -104,9 +103,9 @@ function playGame() {
     //Check: player guesses inside commet area
 
     //Within X range
-    if (guessX >= commetX && guessX + 20) {
+    if (guessX >= commetX && guessX <= commetX + 20) {
         //Within Y range
-        if (guessY >= commetY && guessY + 20) {
+        if (guessY >= commetY && guessY <= commetY + 20) {
             gameWon = true;
             endGame();
         }
