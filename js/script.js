@@ -26,6 +26,16 @@ let output = document.querySelector("#output");
 let button = document.querySelector("#fire");
 button.addEventListener("click", clickHandler, false);
 
+//Listen for enter key presses
+
+window.addEventListener("keydown", keydownHandler, false);
+
+function keydownHandler(event) {
+    if (event.key === "Enter") {
+        validateInput();
+    }
+}
+
 //Game functionality
 
 function render() {
@@ -40,11 +50,43 @@ function render() {
     missile.style.left = guessX + "px";
     missile.style.top = guessY + "px";
 
+    //Display explosion & hide commet if game won
+    if (gameWon) {
+        //Display the explosion
+        explosion.style.display = "block";
+        explosion.style.left = commetX + "px";
+        explosion.style.top = commetY + "px";
+
+        //Hide the commet
+        commet.style.display = "none";
+
+        //Hide the missile
+        missile.style.display = "none";
+    }
+
 }
 
-//Start game with click of button
+//Click button to validate input
+
 function clickHandler() {
-    playGame();
+    validateInput();
+}
+
+//Validate input & start game if successful
+
+function validateInput() {
+    guessX = parseInt(inputX.value);
+    guessY = parseInt(inputY.value);
+
+    if (isNaN(guessX) || isNaN(guessY)) {
+        output.innerHTML = "Please enter a number.";
+    }
+    else if (guessX > 300 || guessY > 300) {
+        output.innerHTML = "Please enter a number less than 300.";
+    }
+    else {
+        playGame();
+    }
 }
 
 //Game play functionality
@@ -101,4 +143,15 @@ function endGame() {
     } else {
         output.innerHTML = "GAME OVER! The earth has been destroyed";
     }
+
+    //Disable the button
+    button.removeEventListener("click", clickHandler, false);
+    button.disabled = true;
+
+    //Disable the enter key
+    window.removeEventListener("keydown", keydownHandler, false);
+
+    //Disable the input fields
+    inputX.disabled = true;
+    inputY.disabled = true;
 }
