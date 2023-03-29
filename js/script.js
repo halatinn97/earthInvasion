@@ -53,7 +53,7 @@ function playGame() {
     //Game status
     shotsRemaining = shotsRemaining - 1;
     shotsFired = shotsFired + 1;
-    gameState = " Shots: " + shotsMade + ", Remaining: " + shotsRemaining;
+    gameState = " Shots: " + shotsFired + ", Remaining: " + shotsRemaining;
 
     //Convert player input into integers
     guessX = parseInt(inputX.value);
@@ -97,7 +97,7 @@ function playGame() {
 //End of game output 
 function endGame() {
     if (gameWon) {
-        output.innerHTML = "WIN! You saved the earth!" + "<br>" + "It only took you " + shotsMade + " shots.";
+        output.innerHTML = "WIN! You saved the earth!" + "<br>" + "It only took you " + shotsFired + " shots.";
     } else {
         output.innerHTML = "GAME OVER! The earth has been destroyed";
     }
